@@ -1,6 +1,0 @@
-*.pyc
-*.log
-report
-build
-dist
-pyse.egg-info
