@@ -41,9 +41,9 @@ class BaiduTest(TestCase):
         self.assertTitle(search_key)
 
 
-if __name__ == '__main__':
-    runner = TestRunner('./', '百度测试用例', '测试环境：Firefox')
-    runner.debug()
+# if __name__ == '__main__':
+#     runner = TestRunner('./', '百度测试用例', '测试环境：Firefox')
+#     runner.debug()
 
 '''
 说明：
