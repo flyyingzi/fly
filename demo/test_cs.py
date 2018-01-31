@@ -1,7 +1,7 @@
-#from pyse import Pyse, TestCase, TestRunner
+# from pyse import Pyse, TestCase, TestRunner
 from parameterized import parameterized
 from pyselenium import Pyse, TestCase, TestRunner
-
+import os,sys
 class BaiduTest(TestCase):
     ''' Baidu serach test case'''
 
@@ -43,7 +43,11 @@ class BaiduTest(TestCase):
 
 if __name__ == '__main__':
     runner = TestRunner('./', '百度测试用例', '测试环境：Firefox')
-    runner.run_only()
+    # runner.run_only()
+    case_url= os.getcwd()
+    case_name = os.path.basename(sys.argv[0])
+    print(case_url,case_name)
+    runner.run_only_report(case_url, case_name)
 
 '''
 说明：

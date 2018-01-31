@@ -1,9 +1,6 @@
-from pyse import Pyse, TestCase, TestRunner
+from pyselenium import pyse, TestCase,TestRunner
 
-import sys, pprint
-pprint.pprint(sys.path)
-
-from .. import page
+from object.page import Baidu_page
 
 class BaiduTest(TestCase):
     ''' Baidu serach test case'''
@@ -14,7 +11,7 @@ class BaiduTest(TestCase):
 
     def test_case(self):
         ''' baidu search key : pyse '''
-        bd = page.Baidu_page.BaiduPage(self.driver)
+        bd = Baidu_page.BaiduPage(self.driver)
         bd.open()
         bd.search_input("pyse")
         bd.search_button()

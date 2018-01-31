@@ -1,6 +1,5 @@
-from pyselenium import pyse, TestCase,TestRunner
-
-from object.page import Baidu_page
+from pyselenium import Pyse, TestCase, TestRunner
+from page import BaiduPage
 
 class BaiduTest(TestCase):
     ''' Baidu serach test case'''
@@ -11,7 +10,7 @@ class BaiduTest(TestCase):
 
     def test_case(self):
         ''' baidu search key : pyse '''
-        bd = Baidu_page.BaiduPage(self.driver)
+        bd = BaiduPage(self.driver)
         bd.open()
         bd.search_input("pyse")
         bd.search_button()
@@ -19,7 +18,5 @@ class BaiduTest(TestCase):
 
 
 if __name__ == '__main__':
-    runner = TestRunner()
-    runner.debug()  # debug 模拟不会生成测试报告
-
-
+    runner = TestRunner('./', '百度测试用例', '测试环境：Firefox')
+    runner.debug()

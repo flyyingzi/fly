@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        pyselenium=pyselenum.Pyse:main
+    
